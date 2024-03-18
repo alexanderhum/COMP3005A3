@@ -5,14 +5,16 @@ public class Main {
     public static String user = "postgres";
     public static String password = "postgres";
     public static void main(String[] args) {
+        /**
         System.out.println("Test 1: getAllStudent");
         getAllStudents();
         System.out.println("\nTest 2: addStudent");
         addStudent("Alex", "Hum", "alex.hum@example.com", "2024-01-01");
         System.out.println("\nTest 3: updateStudentEmail");
-        updateStudentEmail(21, "alexChnage.hum@example.com");
+        updateStudentEmail(36, "changed@example.com");
         System.out.println("\nTest 4: deleteStudent");
-        deleteStudent(21);
+        deleteStudent(36);
+         */
     }
 
     private static void getAllStudents() {
