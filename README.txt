@@ -19,3 +19,19 @@ Step 2: In main, uncomment out the code
 Step 3: Run the main method
 
 YouTube Video Demonstration: https://youtu.be/U1PPEeVyhTw
+
+Database Creation Scripts:
+
+CREATE TABLE students (
+    student_id         SERIAL,
+    first_name         VARCHAR(255) NOT NULL,
+    last_name          VARCHAR(255) NOT NULL,
+    email              VARCHAR(255) UNIQUE NOT NULL,
+    enrollment_date    DATE,
+    PRIMARY KEY (student_id)
+);
+
+INSERT INTO students (first_name, last_name, email, enrollment_date) VALUES
+('John', 'Doe', 'john.doe@example.com', '2023-09-01'),
+('Jane', 'Smith', 'jane.smith@example.com', '2023-09-01'),
+('Jim', 'Beam', 'jim.beam@example.com', '2023-09-02');
