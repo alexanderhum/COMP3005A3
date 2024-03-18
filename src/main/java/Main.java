@@ -17,6 +17,9 @@ public class Main {
          */
     }
 
+    /**
+     * Prints all the students within the Students table
+     */
     private static void getAllStudents() {
         try {
             Class.forName("org.postgresql.Driver");
@@ -36,6 +39,14 @@ public class Main {
             System.out.println(e);
         }
     }
+
+    /**
+     * Adds student to the Students table
+     * @param firstName String for the student first name
+     * @param lastName String for the students last name
+     * @param emailAddress String for the students email
+     * @param enrollmentDate String for the student enrollment date
+     */
     private static void addStudent(String firstName, String lastName, String emailAddress, String enrollmentDate) {
         try {
             Class.forName("org.postgresql.Driver");
@@ -53,6 +64,11 @@ public class Main {
         getAllStudents();
     }
 
+    /**
+     * updates the student email in the Students table
+     * @param studentId int for the students ID
+     * @param emailAddress String for the new email address
+     */
     private static void updateStudentEmail(int studentId, String emailAddress) {
         try {
             Class.forName("org.postgresql.Driver");
@@ -68,6 +84,10 @@ public class Main {
         getAllStudents();
     }
 
+    /**
+     * deletes the student from the Students table
+     * @param studentId int for the student ID number
+     */
     private static void deleteStudent(int studentId) {
         try {
             Class.forName("org.postgresql.Driver");
@@ -81,6 +101,10 @@ public class Main {
         }
         getAllStudents();
     }
+
+    /**
+     * prints the column names for more friendly console output
+     */
     private static void printColumnNames() {
         for(int i=0; i<5; i++) {
             if(i==0) {
